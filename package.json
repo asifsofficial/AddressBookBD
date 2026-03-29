@@ -1,0 +1,24 @@
+{
+  "name": "address-book-bd-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:api",
+    "web:dev": "npm run dev --workspace=@address-book-bd/web",
+    "web:build": "npm run build --workspace=@address-book-bd/web",
+    "dev:core": "npm run dev --workspace=@address-book-bd/core",
+    "dev:api": "npm run dev --workspace=@address-book-bd/api",
+    "build:core": "npm run build --workspace=@address-book-bd/core",
+    "build:api": "npm run build --workspace=@address-book-bd/api",
+    "test": "npm test --workspaces"
+  },
+  "dependencies": {
+    "@mnsakib/address-book-bd": "^1.0.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.5.0",
+    "tailwind-merge": "^3.5.0"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "address-book-bd",
+  "version": "1.0.0",
+  "description": "Comprehensive Bangladesh address library (Divisions, Districts, Upazillas, Unions, Villages, Postcodes)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup src/index.ts --watch",
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "bangladesh",
+    "address",
+    "division",
+    "district",
+    "upazilla",
+    "union",
+    "village",
+    "postcode",
+    "bd"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  },
+  "peerDependencies": {
+    "react": "^19.2.4"
+  }
+}
